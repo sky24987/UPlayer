@@ -1,9 +1,13 @@
-package com.alphanetworks.uplayer;
+package com.alphanetworks.uplayer.ui;
 
+import android.os.Build;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.alphanetworks.uplayer.R;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,6 +16,11 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        DrawerLayout layout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            layout.setStatusBarBackgroundColor(getResources().getColor(R.color.pink_400));
+
     }
 
 
