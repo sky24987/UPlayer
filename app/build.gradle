@@ -11,6 +11,12 @@ android {
         versionCode 1
         versionName "1.0.0"
     }
+
+    packagingOptions {
+        exclude 'META-INF/eclipse.inf'
+        exclude 'META-INF/beans.xml'
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -25,4 +31,21 @@ dependencies {
     compile 'com.android.support:cardview-v7:21.0.3'
     compile 'com.android.support:recyclerview-v7:21.0.3'
     compile 'com.android.support:palette-v7:21.0.3'
+    compile files('src/main/jar/antlr-runtime-4.2.1.jar')
+    compile files('src/main/jar/cling-core-2.0.1.jar')
+    compile files('src/main/jar/cling-support-2.0.1.jar')
+    compile files('src/main/jar/javax.servlet_3.0.0.jar')
+    compile files('src/main/jar/org.eclipse.jetty.client_8.1.8.jar')
+    compile files('src/main/jar/org.eclipse.jetty.continuation_8.1.8.jar')
+    compile files('src/main/jar/org.eclipse.jetty.http_8.1.8.jar')
+    compile files('src/main/jar/org.eclipse.jetty.io_8.1.8.jar')
+    compile files('src/main/jar/org.eclipse.jetty.security_8.1.8.jar')
+    compile files('src/main/jar/org.eclipse.jetty.server_8.1.8.jar')
+    compile files('src/main/jar/org.eclipse.jetty.servlet_8.1.8.jar')
+    compile files('src/main/jar/org.eclipse.jetty.util_8.1.8.jar')
+    compile files('src/main/jar/seamless-http-1.1.0.jar')
+    compile files('src/main/jar/seamless-util-1.1.0.jar')
+    compile files('src/main/jar/seamless-xml-1.1.0.jar')
+    compile files('src/main/jar/slf4j-api-1.7.6.jar')
+    compile files('src/main/jar/slf4j-jdk14-1.7.6.jar')
 }
