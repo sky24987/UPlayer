@@ -14,21 +14,14 @@ import android.view.MenuItem;
 
 import com.alphanetworks.uplayer.R;
 import com.alphanetworks.uplayer.ui.adapter.ViewPagerAdapter;
-import com.alphanetworks.uplayer.ui.widget.SlidingTabLayout;
 
 public class MainActivity extends ActionBarActivity {
 
 	private static final String TAG = MainActivity.class.getSimpleName();
 
-	private static final int[] INDICATOR_COLORS = new int[] {};
-
-	private static final int[] DIVIDER_COLORS = new int[] {};
-
 	private Context mContext = null;
-
 	private DrawerLayout mNavigation = null;
 	private Toolbar mToolbar = null;
-	private SlidingTabLayout mViewPagerIndicator = null;
 	private ViewPager mViewPager = null;
 	private ViewPagerAdapter mPagerAdapter = null;
 
@@ -43,18 +36,11 @@ public class MainActivity extends ActionBarActivity {
 
 		if (mToolbar != null)
 			setSupportActionBar(mToolbar);
-
-		mViewPagerIndicator = (SlidingTabLayout) findViewById(R.id.main_pager_indicator);
-
 		mViewPager = (ViewPager) findViewById(R.id.main_view_pager);
 
 		mPagerAdapter = new ViewPagerAdapter(mContext,
 				getSupportFragmentManager());
         mViewPager.setAdapter(mPagerAdapter);
-
-        mViewPagerIndicator.setCustomTabView(R.layout.indicator_layout,R.id.indicator_textview);
-        mViewPagerIndicator.setViewPager(mViewPager);
-
 
 		mNavigation = (DrawerLayout) findViewById(R.id.main_navitagion_layout);
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)

@@ -42,15 +42,12 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
 		switch (position) {
 		case 0:
-            Log.e(TAG,"0000000000000");
             fragment = MusicFragment.newInstance();
 			break;
 		case 1:
-            Log.e(TAG,"1111111111111");
 			fragment = VideoFragment.newInstance();
 			break;
 		case 2:
-            Log.e(TAG,"2222222222222");
 			fragment = ImageFragment.newInstance();
 			break;
 		default:
