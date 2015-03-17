@@ -9,6 +9,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -43,9 +44,10 @@ public class MainActivity extends ActionBarActivity {
         mViewPager.setAdapter(mPagerAdapter);
 
 		mNavigation = (DrawerLayout) findViewById(R.id.main_navitagion_layout);
+        TypedValue typedValue = new  TypedValue();
+        mContext.getTheme().resolveAttribute(R.attr.colorPrimary, typedValue, true);
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-			mNavigation.setStatusBarBackgroundColor(getResources().getColor(
-					R.color.pink_400));
+			mNavigation.setStatusBarBackgroundColor(typedValue.data);
 
 	}
 
