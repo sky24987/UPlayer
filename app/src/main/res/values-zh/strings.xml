@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UPlayer</string>
+    <string name="menu_settings">设置</string>
+    <string name="indicator_music">音乐</string>
+    <string name="indicator_video">视频</string>
+    <string name="indicator_image">图片</string>
+</resources>

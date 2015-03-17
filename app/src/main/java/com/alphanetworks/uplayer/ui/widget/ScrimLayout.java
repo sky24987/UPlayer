@@ -13,7 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.alphanetworks.uplayer.ui;
+package com.alphanetworks.uplayer.ui.widget;
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -23,6 +24,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
+
 import com.alphanetworks.uplayer.R;
 
 /**

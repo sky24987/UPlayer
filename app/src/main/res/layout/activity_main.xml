@@ -1,6 +1,6 @@
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/drawer_layout"
+    android:id="@+id/main_navitagion_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
@@ -11,17 +11,26 @@
         android:orientation="vertical">
 
         <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar" />
+            android:id="@+id/main_toolbar"
+            layout="@layout/toolbar_layout" />
+
+        <com.alphanetworks.uplayer.ui.widget.SlidingTabLayout
+            android:id = "@+id/main_pager_indicator"
+            android:background="?attr/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            </com.alphanetworks.uplayer.ui.widget.SlidingTabLayout>
+
 
         <android.support.v4.view.ViewPager
-            android:id="@+id/view_pager"
+            android:id="@+id/main_view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
 
 
-    <com.alphanetworks.uplayer.ui.ScrimLayout
+    <com.alphanetworks.uplayer.ui.widget.ScrimLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -53,6 +62,6 @@
                     android:text="@string/app_name" />
             </RelativeLayout>
         </LinearLayout>
-    </com.alphanetworks.uplayer.ui.ScrimLayout>
+    </com.alphanetworks.uplayer.ui.widget.ScrimLayout>
 </android.support.v4.widget.DrawerLayout>
 

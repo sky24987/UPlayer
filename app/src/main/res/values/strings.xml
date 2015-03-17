@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">UPlayer</string>
-
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="menu_settings">Settings</string>
+    <string name="indicator_music">MUSIC</string>
+    <string name="indicator_video">VIDEO</string>
+    <string name="indicator_image">IMAGE</string>
 </resources>
