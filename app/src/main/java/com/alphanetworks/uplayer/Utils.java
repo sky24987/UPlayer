@@ -19,6 +19,8 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.util.Log;
 import android.widget.Toast;
+import android.os.Handler;
+import android.os.Looper;
 
 public class Utils {
 
@@ -57,6 +59,11 @@ public class Utils {
 				Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
 			}
 		});
+	}
+
+	public static Handler getUiThread() {
+
+		return new Handler(Looper.getMainLooper());
 	}
 
 	public static InetAddress getInetAddress(Context context) {

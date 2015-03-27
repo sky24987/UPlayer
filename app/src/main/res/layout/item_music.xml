@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/music_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginTop="@dimen/cardview_margin"
+    android:layout_marginLeft="@dimen/cardview_margin"
+    android:layout_marginRight="@dimen/cardview_margin"
+    card:cardCornerRadius="@dimen/cardview_radius">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/music_album_thumb" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/defalut_margin"
+        android:layout_marginRight="@dimen/defalut_margin">
+
+        <TextView
+            android:id="@+id/music_album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_body"
+            android:singleLine="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/music_signer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_body"
+            android:layout_above="@id/music_album"
+            android:layout_marginBottom="4dp"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/music_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_title"
+            android:layout_above="@id/music_signer"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:singleLine="true" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+
+
+
+

@@ -22,6 +22,7 @@ import com.alphanetworks.uplayer.Utils;
 import com.alphanetworks.uplayer.ui.adapter.ViewPagerAdapter;
 import com.alphanetworks.uplayer.ui.fragments.DepthPageTransformer;
 import com.alphanetworks.uplayer.upnp.dmr.MediaRenderer;
+import com.alphanetworks.uplayer.upnp.dms.ContentGenerator;
 import com.alphanetworks.uplayer.upnp.dms.MediaServer;
 
 import org.fourthline.cling.android.AndroidUpnpService;
@@ -127,10 +128,12 @@ public class MainActivity extends ActionBarActivity implements
 	@Override
 	public void onServiceConnected(ComponentName componentName, IBinder service) {
 		Log.e(TAG, "UPNP service is connected.");
-
 		mUpnpService = (AndroidUpnpService) service;
 
 		mMediaServer = new MediaServer(mContext, Utils.getInetAddress(mContext));
+
+        ContentGenerator.prepareAudio(mContext,mMediaServer);
+
 		if (mMediaServer != null)
 			mUpnpService.getRegistry().addDevice(mMediaServer.getDevice());
 		mMediaRenderer = new MediaRenderer(mContext);
